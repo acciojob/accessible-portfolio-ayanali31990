@@ -8,6 +8,86 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Accessible Portfolio — Alex Taylor</title>
+  <!-- Linked CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navigation with role navigation -->
+  <nav role="navigation" aria-label="Primary navigation">
+    <ul role="list" class="nav-list">
+      <li role="listitem"><a href="#about">About</a></li>
+      <li role="listitem"><a href="#work">Work</a></li>
+      <li role="listitem"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header / Page heading with role heading -->
+  <header>
+    <h1 role="heading" aria-level="1">Alex Taylor — Designer &amp; Frontend Developer</h1>
+  </header>
+
+  <!-- Main content -->
+  <main id="main" role="main" tabindex="-1" aria-labelledby="main-heading">
+    <!-- A short accessible hero/profile with an image -->
+    <section aria-labelledby="main-heading" class="hero">
+      <h2 id="main-heading" class="visually-hidden">Profile</h2>
+
+      <!-- Image with role img and an alt attribute -->
+      <img
+        src="profile.jpg"
+        alt="Headshot of Alex Taylor smiling, wearing a blue shirt"
+        role="img"
+        width="300"
+        height="300"
+      />
+
+      <!-- Brief description -->
+      <p class="description">
+        Hi — I'm Alex, a product designer and front-end developer who builds accessible,
+        user-centered interfaces. I focus on clean visuals, performance, and inclusive UX.
+      </p>
+    </section>
+
+    <!-- Work / projects list -->
+    <section id="work" aria-labelledby="work-heading">
+      <h3 id="work-heading">Selected Projects</h3>
+      <ul role="list" class="projects">
+        <li role="listitem">
+          <strong>Project Aurora</strong> — Accessible UI system for healthcare dashboards.
+        </li>
+        <li role="listitem">
+          <strong>OpenCart</strong> — Lightweight e-commerce frontend with WCAG-compliant checkout.
+        </li>
+        <li role="listitem">
+          <strong>LearnTogether</strong> — Inclusive learning platform with keyboard-first navigation.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Get in touch</h3>
+      <p>
+        Email: <a href="mailto:alex@example.com">alex@example.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span aria-hidden="true">2025</span> Alex Taylor</p>
+  </footer>
+</body>
+</html>
+
     <script type="text/javascript" src="./script.js">
 </script>
 
